@@ -1,4 +1,10 @@
 var allButtons=$('#buttons>span')
+var num=0
+let size=allButtons.length
+let timeSlide=setClock()
+
+
+
 for(let i=0;i<allButtons.length;i++) {
     $(allButtons[i]).on('click',function(clickSlide) {
         let index=$(clickSlide.currentTarget).index()
@@ -11,18 +17,19 @@ for(let i=0;i<allButtons.length;i++) {
         num=index
     })
 }
-var num=0
-let size=allButtons.length
-let timeSlide=setInterval(()=>{
-    num++
-    allButtons.eq(num%size).trigger('click')
-},1000)
+
+
+
+
 $('.pictureWindows').on('mouseenter',function(){
-    clearInterval(timeSlide)
+    window.clearInterval(timeSlide)
 })
 $('.pictureWindows').on('mouseleave',function(){
-    timeSlide=setInterval(()=>{
+    timeSlide=setClock()
+})
+function setClock() {
+    return setInterval(()=>{
         num++
         allButtons.eq(num%size).trigger('click')
-    },1000)
-})
+    },2000)
+}
