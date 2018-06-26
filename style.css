@@ -2,6 +2,11 @@
     margin:0;
     padding:0;
 }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .pictureWindows{
     width:600px;
     overflow: hidden;
@@ -9,10 +14,18 @@
 .images {
     display: flex;
     align-items: flex-start;
+    transition:all 0.3s;
 } 
 .images img {
     vertical-align: top;
 }
 .red{
     color: red;
+}
+#buttons {
+    text-align: center;
+}
+#buttons span {
+    margin:0 15px;
+    cursor: pointer;
 }
