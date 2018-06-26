@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+}
+.pictureWindows{
+    width:600px;
+    overflow: hidden;
+}
+.images {
+    display: flex;
+    align-items: flex-start;
+} 
+.images img {
+    vertical-align: top;
+}
+.red{
+    color: red;
+}
